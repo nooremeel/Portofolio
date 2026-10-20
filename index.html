@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nour Emil — Backend & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Nour Emil — Backend & Full-Stack Developer based in Cairo, Egypt. Specializing in Node.js, TypeScript, PostgreSQL, and MongoDB with 250+ automated tests, ACID checkouts, and hardened security.">
+  <meta name="keywords" content="Nour Emil, Backend Developer, Full-Stack Developer, Node.js, TypeScript, PostgreSQL, MongoDB, Docker, Vitest, Cairo Egypt">
+  <meta name="author" content="Nour Emil">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nour Emil — Backend & Full-Stack Developer">
+  <meta property="og:description" content="Backend-focused developer building rock-solid APIs, ACID transaction pipelines, and security-hardened web applications with 250+ automated tests.">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Solstice Design System Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Fixed Header -->
+  <header>
+    <a href="#hero" class="brand" aria-label="Nour Emil Portfolio">
+      <span>nour</span><span class="gt">.</span><span>dev</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main Navigation">
+      <a href="#work">Projects</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn s sm" id="theme-toggle" aria-label="Toggle light or dark theme">
+        ◐ Theme
+      </button>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+        ☰ Menu
+      </button>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <i id="bar" aria-hidden="true"></i>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <a href="#work">Projects</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <button class="btn s sm" id="mobile-theme-toggle" style="margin-top: 0.5rem;">
+      ◐ Toggle Theme
+    </button>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <!-- Ambient Sunset Parallax Orbs -->
+      <div class="orb o1" data-speed="0.18" aria-hidden="true"></div>
+      <div class="orb o2" data-speed="-0.14" aria-hidden="true"></div>
+      <div class="orb o3" data-speed="0.30" aria-hidden="true"></div>
+
+      <div class="wrap" id="hero-content-wrap">
+        <div class="hero-content">
+          <!-- Availability Tag with Pulsing Status Indicator -->
+          <div class="tag">
+            <i aria-hidden="true"></i>
+            <span id="availability-status">Available for Junior Backend or Full-Stack Roles</span>
+          </div>
+
+          <!-- 3-Line Display Headline with Mask Text Reveal Animation -->
+          <h1>
+            <span class="ln" style="--i: 0"><span>Engineering resilient</span></span>
+            <span class="ln" style="--i: 1"><span class="gt">backend architectures,</span></span>
+            <span class="ln" style="--i: 2"><span>verified with 250+ tests.</span></span>
+          </h1>
+
+          <!-- Lead Paragraph -->
+          <p class="hero-lead" id="hero-lead">
+            Backend-focused full-stack developer (Node.js, TypeScript, PostgreSQL, MongoDB). Built multi-vendor e-commerce with Paymob payment integration, ACID checkouts, and AI applications with hardened security and CI/CD. Top ~5% AI trainer at Outlier.
+          </p>
+
+          <!-- Magnetic CTAs -->
+          <div class="hero-actions">
+            <a class="btn p mag" href="#work">
+              Explore Projects →
+            </a>
+            <a class="btn s mag" href="#contact">
+              Get In Touch
+            </a>
+            <a class="btn g" id="resume-btn" href="Nour_Emil_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              View Resume ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats-strip" id="stats" aria-label="Engineering Milestones">
+      <div class="wrap">
+        <div class="stats-grid" id="stats-grid">
+          <!-- Populated dynamically from data/projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="projects-header">
+          <div>
+            <span class="eyebrow rv">01 — FEATURED PROJECTS</span>
+            <h2 id="work-title" class="rv">Systems built to <span class="gt">scale & endure.</span></h2>
+            <p class="lead rv">Production-grade distributed services, payment-integrated platforms, and security-hardened applications.</p>
+          </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-bar rv" id="project-filter-bar">
+          <!-- Populated dynamically from data/projects.js categories -->
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid" id="projects-grid">
+          <!-- Populated dynamically from data/projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <span class="eyebrow rv">02 — ABOUT NOUR</span>
+        <h2 id="about-title" class="rv">Bridging deep engineering <span class="gt">with proven reliability.</span></h2>
+
+        <div class="about-grid">
+          <div class="about-text rv">
+            <p>
+              I am a backend-focused full-stack developer based in Cairo, Egypt. My core engineering stack centers around <strong>Node.js, Express 5, TypeScript, PostgreSQL, and MongoDB</strong>.
+            </p>
+            <p>
+              I take pride in writing resilient, verifiable code: from engineering ACID checkout pipelines with PostgreSQL row-level locking to verify race condition safety against 20 concurrent buyers, to constant-time HMAC-SHA512 webhook verification for payment gateways, and SSRF defense on external URL fetchers.
+            </p>
+            <p>
+              Currently, I also work remotely as an <strong>AI Data Trainer & Quality Assurance at Outlier</strong>, where I've completed 300+ expert-level RLHF evaluations and earned selection into Outlier's prestigious Oracle program (top ~5% of contributors).
+            </p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+              <a class="btn p mag contact-email-link" href="mailto:nooremeel1@gmail.com">
+                Let's Talk →
+              </a>
+              <button class="btn s mag copy-email-btn">
+                Copy Email
+              </button>
+            </div>
+          </div>
+
+          <!-- Visual Profile Frame -->
+          <div class="about-card glass rv" style="--d: 2;">
+            <div class="avatar-graphic" aria-hidden="true">NE</div>
+            <h3 style="font-size: 1.45rem; margin-bottom: 0.35rem;">Nour Emil</h3>
+            <p style="font-family: var(--f-mono); font-size: 0.82rem; color: var(--amber); margin-bottom: 1.25rem;">
+              Backend & Full-Stack Developer · Cairo, Egypt
+            </p>
+            <div class="chips-row" style="justify-content: center;">
+              <span class="chip">Node.js & TS</span>
+              <span class="chip">PostgreSQL & ACID</span>
+              <span class="chip">250+ Tests</span>
+              <span class="chip">Top 5% Outlier Oracle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Stack Section -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <span class="eyebrow rv">03 — TECH STACK & ARCHITECTURE</span>
+        <h2 id="skills-title" class="rv">Hardened security, <span class="gt">automated testing, solid DBs.</span></h2>
+        <p class="lead rv">Tools, databases, and testing frameworks I utilize to build fault-tolerant production applications.</p>
+
+        <div class="skills-container" id="skills-container">
+          <!-- Populated dynamically from data/projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <span class="eyebrow rv">04 — EXPERIENCE & EDUCATION</span>
+        <h2 id="experience-title" class="rv">Track record of <span class="gt">rigor & continuous growth.</span></h2>
+
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 2rem;">
+          <!-- Outlier Experience Card -->
+          <div class="glass pad rv" style="--d: 1;">
+            <div class="project-meta">
+              <span class="chip">Remote · Nov 2024 – Present</span>
+              <span class="project-badge">Top ~5% Oracle</span>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">AI Data Trainer & Quality Assurance</h3>
+            <p style="font-family: var(--f-mono); font-size: 0.82rem; color: var(--amber); margin-bottom: 1rem;">Outlier</p>
+            <ul style="padding-left: 1.25rem; margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6;">
+              <li style="margin-bottom: 0.6rem;">Completed 300+ expert-level RLHF and rubric-based evaluations, rating AI responses for reasoning, code logic, and factual accuracy.</li>
+              <li>Selected for Outlier's prestigious Oracle program (top ~5% of contributors worldwide) for consistent evaluation rigor and QA excellence.</li>
+            </ul>
+          </div>
+
+          <!-- Education Card -->
+          <div class="glass pad rv" style="--d: 2;">
+            <div class="project-meta">
+              <span class="chip">2020 – 2024</span>
+              <span class="project-badge">GPA 3.4 / 4.0</span>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-top: 0.5rem; margin-bottom: 0.25rem;">B.Sc. in Computer Science</h3>
+            <p style="font-family: var(--f-mono); font-size: 0.82rem; color: var(--amber); margin-bottom: 1rem;">Assiut University</p>
+            <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+              Focused on core computer science foundations, algorithms, data structures, database design, operating systems, and computer networks.
+            </p>
+            <div class="chips-row">
+              <span class="chip">Arabic (Native)</span>
+              <span class="chip">English (C1, TOEFL ITP 640)</span>
+            </div>
+          </div>
+
+          <!-- Certifications Card -->
+          <div class="glass pad rv" style="--d: 3;">
+            <div class="project-meta">
+              <span class="chip">Certifications & Honors</span>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-top: 0.5rem; margin-bottom: 1rem;">Professional Development</h3>
+            <ul style="padding-left: 1.25rem; margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.65;">
+              <li style="margin-bottom: 0.5rem;"><strong>McKinsey & Company</strong> — Forward Program (Structured Thinking & Agile)</li>
+              <li style="margin-bottom: 0.5rem;"><strong>Academind</strong> — Node.js: The Complete Guide (MVC, REST APIs, GraphQL)</li>
+              <li style="margin-bottom: 0.5rem;"><strong>Google</strong> — Data Analytics Professional Certificate</li>
+              <li><strong>Google</strong> — Crash Course on Python</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-box glass rv">
+          <span class="eyebrow">05 — GET IN TOUCH</span>
+          <h2 id="contact-title">Let's build something <span class="gt">exceptional together.</span></h2>
+          <p class="lead">
+            Actively seeking a <strong>Junior Backend or Full-Stack developer role</strong>. Whether you have an open engineering position, a project to collaborate on, or want to discuss system architecture, I'd love to connect.
+          </p>
+
+          <div class="contact-links">
+            <a class="btn p mag contact-email-link" href="mailto:nooremeel1@gmail.com">
+              Email nooremeel1@gmail.com →
+            </a>
+            <button class="btn s mag copy-email-btn">
+              Copy Email Address
+            </button>
+            <a class="btn s mag" href="tel:+201204481994">
+              Call +20 120 448 1994
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-pills">
+            <a id="social-github" href="https://github.com/nooremeel" target="_blank" rel="noopener noreferrer">
+              GitHub (@nooremeel) ↗
+            </a>
+            <a id="social-linkedin" href="https://linkedin.com/in/nour-emil" target="_blank" rel="noopener noreferrer">
+              LinkedIn (Nour Emil) ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p style="margin: 0;">
+        Nour Emil · Built with Solstice Design System · Cairo, Egypt
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Case Study Deep Dive -->
+  <div class="modal-overlay" id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="case-study-title">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Case Study Modal">✕</button>
+      <div id="case-study-content">
+        <!-- Content injected dynamically via openCaseStudy() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Sources & Script Orchestration -->
+  <script src="data/projects.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

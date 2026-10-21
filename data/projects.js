@@ -13,9 +13,9 @@ window.PORTFOLIO_DATA = {
     phone: "+20 120 448 1994",
     email: "nooremeel1@gmail.com",
     eyebrow: "00 — BACKEND & FULL-STACK DEVELOPER",
-    headlineLine1: "Engineering resilient",
-    headlineLine2: "backend architectures,",
-    headlineLine3: "verified with 250+ automated tests.",
+    headlineLine1: "Engineering scalable",
+    headlineLine2: "backend & web platforms,",
+    headlineLine3: "built for reliability, speed, and revenue.",
     lead: "Backend-focused developer building rock-solid APIs, ACID transaction pipelines, and security-hardened applications. Top ~5% AI trainer at Outlier, CS graduate from Assiut University.",
     availability: "Available for Junior Backend or Full-Stack Roles",
     bio: [
@@ -24,10 +24,10 @@ window.PORTFOLIO_DATA = {
       "In addition to building software, I am an AI Data Trainer & QA at Outlier, selected for the Oracle program (top ~5% of contributors) for high-reasoning evaluations and rubric-based QA."
     ],
     stats: [
-      { value: "250+", label: "Automated Tests Written" },
-      { value: "100%", label: "ACID Concurrency Safety" },
-      { value: "Top 5%", label: "Outlier Oracle Contributor" },
-      { value: "3", label: "Production Apps Deployed" }
+      { value: "3", label: "Live Production Platforms" },
+      { value: "< 50ms", label: "Indexed Search Latency" },
+      { value: "100%", label: "ACID & Payment Integrity" },
+      { value: "Top 5%", label: "Vetted AI Specialist (Outlier)" }
     ],
     skillsGrouped: [
       {
@@ -192,6 +192,36 @@ window.PORTFOLIO_DATA = {
       links: {
         github: "https://github.com/nooremeel/GISTLY",
         live: "https://gistly-frontend.vercel.app",
+        docs: "#"
+      }
+    },
+    {
+      id: "nodejs-social-rest",
+      title: "Real-Time Social Feed & REST API",
+      tagline: "Stateless RESTful backend featuring real-time bidirectional Socket.io feed sync, JWT auth, and Multer upload pipelines.",
+      category: "Backend",
+      year: "2025",
+      featured: true,
+      badge: "⚡ Socket.io Real-Time Sync",
+      tags: ["Node.js", "Express.js", "Socket.io", "MongoDB", "JWT", "Multer"],
+      description: "Stateless REST API backend for a social publishing platform. Features bidirectional WebSocket broadcasting via Socket.io for instant post synchronization across active clients, cryptographic JWT authentication, multipart image upload pipelines with Multer, express-validator sanitization, and centralized async error handling.",
+      problem: "Traditional REST APIs require client-side polling to discover new or updated posts, producing unnecessary network traffic and stale UI states. Furthermore, user-uploaded media and untrusted request inputs introduce memory leaks and injection risks if not strictly sanitized.",
+      solution: "Engineered persistent Socket.io WebSocket connections alongside stateless Express endpoints to broadcast real-time creation, edit, and deletion events directly to connected clients. Integrated a streaming Multer pipeline for unique image storage and centralized error-handling middleware that catches async exceptions without crashing the Node runtime.",
+      architecture: [
+        "Bidirectional Real-Time Synchronization: Implemented persistent Socket.io server layer to broadcast real-time events (create, update, delete) to all active client connections without polling overhead.",
+        "Stateless JWT Authentication: Decoupled user session state from server memory using cryptographically signed JSON Web Tokens (jsonwebtoken) and bcryptjs password hashing.",
+        "Multipart File Upload Pipeline: Configured multer disk storage with MIME-type filtering, file size validation, and timestamped UUID generation for post attachments.",
+        "Server-Side Data Sanitization: Enforced schema boundaries and payload cleansing using express-validator to eliminate malformed inputs and NoSQL injection vectors.",
+        "Centralized Async Error Handling: Created unified Express error middleware catching sync and async errors across controllers, returning uniform, predictable JSON error payloads."
+      ],
+      metrics: [
+        { label: "Real-Time Layer", value: "Socket.io" },
+        { label: "Auth Architecture", value: "Stateless JWT" },
+        { label: "File Uploads", value: "Multer Native" },
+        { label: "Payload Validation", value: "express-validator" }
+      ],
+      links: {
+        github: "https://github.com/nooremeel/nodeJs-Social-REST",
         docs: "#"
       }
     }
